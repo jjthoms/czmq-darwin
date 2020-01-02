@@ -1,1 +1,1 @@
-# czmq-darwin
+# libczmq-darwin

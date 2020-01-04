@@ -7,8 +7,8 @@
 require 'fileutils'
 
 # ZeroMQ release version
-#PKG_VER="4.2.0"
-PKG_VER="3.0.2"
+PKG_VER="4.2.0"
+#PKG_VER="3.0.2"
 
 # Minimum platform versions
 IOS_VERSION_MIN         = "11.0"
@@ -255,7 +255,7 @@ for platform in PLATFORMS
   exit 1 unless system(lipo_cmd)
 
   # Copy headers for architecture
-  for arch in VALID_ARHS_PER_PLATFORM["iOS"]
+  for arch in VALID_ARHS_PER_PLATFORM["#{platform}"]
       include_dir = "#{BUILDDIR}/#{platform}-#{arch}/include"
       if File.directory? include_dir
         FileUtils.cp_r(include_dir, dist_platform_folder)

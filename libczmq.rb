@@ -265,4 +265,4 @@ for platform in PLATFORMS
 end
 
 # Cleanup
-#FileUtils.rm_rf BUILDDIR
+FileUtils.rm_rf BUILDDIR
